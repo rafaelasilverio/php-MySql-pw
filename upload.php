@@ -3,8 +3,8 @@
 include_once('conexao.php');
 
 //receber a variavel de nome lá do index
-$x = $_POST[""];
-$nome_final = ".png";
+$x = $_GET["nome"];
+$nome_final = $x +".png";
 
 if (substr($_FILES['arquivo']['name'], -3) == "png" || substr($_FILES['arquivo']['name'], -3) == "jpg" ) {
     $dir = './arquivos/';
