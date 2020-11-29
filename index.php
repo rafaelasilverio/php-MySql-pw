@@ -9,6 +9,11 @@
         <div>
              <form action="upload.php" method="get">
              <label for="arquivo">Insira o nome do arquivo:<input type = "text" name = "nome"/><br></label>
+             <br>
+             <label> </label>
+             <label>PNG<input type="radio" name ="selpng"></label>
+             <label> </label>
+             <label>JPG<input type="radio" name ="selpng"></label>
              <input type="submit" value="Enviar" />
              </form>
             <form action="upload.php" method="post" enctype="multipart/form-data">
