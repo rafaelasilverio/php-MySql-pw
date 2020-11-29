@@ -7,7 +7,7 @@
     <body>
         <h1> Exemplo de Upload - PHP </h1>
         <div>
-             <form action="upload.php" method="post">
+             <form action="upload.php" method="get">
              <label for="arquivo">Insira o nome do arquivo:<input type = "text" name = "nome"/><br></label>
              <input type="submit" value="Enviar" />
              </form>
