@@ -8,6 +8,7 @@
         <h1> Exemplo de Upload - PHP </h1>
         <div>
             <form action="upload.php" method="post" enctype="multipart/form-data">
+            <label for="arquivo">Informe o nome do arquivo:</label><input type = "text" name = "nome"/><br>
                 <label for="arquivo">Arquivo:</label> <input type="file" name="arquivo" id="arquivo" />
                 <br />
                 <br />

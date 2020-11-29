@@ -2,10 +2,11 @@
 
 include_once('conexao.php');
 
-
+//receber a variavel de nome lá do index
+$x = $_POST[""];
 $nome_final = ".png";
 
-if (substr($_FILES['arquivo']['name'], -3) == "png") {
+if (substr($_FILES['arquivo']['name'], -3) == "png" || substr($_FILES['arquivo']['name'], -3) == "jpg" ) {
     $dir = './arquivos/';
     $tmpName = $_FILES['arquivo']['tmp_name'];
     $name = $_FILES['arquivo']['name'];
@@ -18,7 +19,7 @@ if (substr($_FILES['arquivo']['name'], -3) == "png") {
         echo "Erro ao gravar o arquivo";
     }
 } else {
-    echo "Não é documento png";
+    echo "Não é documento png ou jpg";
 }
 ?>
 
