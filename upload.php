@@ -2,13 +2,13 @@
 
 include_once('conexao.php');
 
-$nome_final= $_POST["nome"];
+$nome = $_POST["nome"];
 $tipo= $_POST["tipo"];
 if($tipo == 1){
-    $nome_final = ".png";
+    $nome_final = $nome .".png";
 
 }else if($tipo == 2){
-    $nome_final = ".jpg";
+    $nome_final = $nome .".jpg";
 }
 
 if (substr($_FILES['arquivo']['name'], -3) == "png" ||substr($_FILES['arquivo']['name'], -3) == "jpg"){
