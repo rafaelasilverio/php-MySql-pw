@@ -3,11 +3,11 @@
 include_once('conexao.php');
 
 
-$tipo = $_GET["tipo"];
+$tipo = $_POST["tipo"];
 //receber a variavel de nome lá do index
 if($tipo == "png"){
 
-    $nome = $_GET["name"];
+    $nome = $_POST["name"];
     $nome_final = $nome . ".png";
 
   if (substr($_FILES['arquivo']['name'], -3) == "png") {
@@ -25,7 +25,7 @@ if($tipo == "png"){
   
 if($tipo == "jpg"){
  
-    $nome = $_GET["name"];
+    $nome = $_POST["name"];
     $nome_final = $nome . ".jpg";
 
     if (substr($_FILES['arquivo']['name'], -3) == "jpg") {

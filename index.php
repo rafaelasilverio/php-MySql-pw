@@ -7,17 +7,14 @@
     <body>
         <h1> Exemplo de Upload - PHP </h1>
         <div>
-             <form action="upload.php" method="get">
-             <label for="arquivo">Insira o nome do arquivo:<input type = "text" name = "name"/><br></label>
-             <br>
-             <label> </label>
-             <label>PNG<input type="radio" name ="tipo" value = "png"></label>
-             <label> </label>
-             <label>JPG<input type="radio" name ="tipo" value = "jpg"></label>
-             <input type="submit" value="Enviar" />
-             </form>
             <form action="upload.php" method="post" enctype="multipart/form-data">
+                <label for="arquivo">Insira o nome do arquivo:<input type = "text" name = "nome"/><br></label>
                 <label for="arquivo">Arquivo:</label> <input type="file" name="arquivo" id="arquivo" />
+                <br>
+                <label> </label>
+                <label>PNG<input type="radio" name ="tipo" value = "png"></label>
+                <label> </label>
+                <label>JPG<input type="radio" name ="tipo" value = "jpg"></label>
                 <br />
                 <br />
                 <input type="submit" value="Enviar" />
