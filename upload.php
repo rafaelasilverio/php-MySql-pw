@@ -1,5 +1,31 @@
 <?php
 
+include_once('conexao.php');
+
+$nome_final= $_POST["nome"];
+$tipo= $_POST["tipo"];
+if($tipo == 1){
+    $nome_final = ".png";
+
+}else if($tipo == 2){
+    $nome_final = ".jpg";
+}
+
+if (substr($_FILES['arquivo']['name'], -3) == "png" ||substr($_FILES['arquivo']['name'], -3) == "jpg"){
+    $dir = './arquivos/';
+    $tmpName = $_FILES['arquivo']['tmp_name'];
+    $name = $_FILES['arquivo']['name'];
+    if (move_uploaded_file($tmpName, $dir . $nome_final)) {
+         $sqlstring = "insert into imagens (id, arquivo, nomeI) values (null, '$nome_final', nomeI)";
+        mysqli_query($conexao, $sqlstring);
+        header('Location: index.php');
+    } else {
+        echo "Não ouve êxito ao gravar a imagem";
+    }
+} else {
+    echo "O tipo da imagem não é válido!";
+}
+
 
 // $tipo = $_POST["tipo"];
 // $nome = $_POST["nome"];
@@ -25,51 +51,47 @@
 //             echo "Não é documento jpg";
 //         }
 //     }
-include_once('conexao.php');
-$tipo = $_POST["tipo"];
-//receber a variavel de nome lá do index
-if($tipo == "1"){
+// $tipo = $_POST["tipo"];
+// //receber a variavel de nome lá do index
+// if($tipo == "1"){
 
-    $nome = $_POST["nome"];
-    $nome_final = $nome . ".png";
+//     $nome = $_POST["nome"];
+//     $nome_final = $nome . ".png";
 
-  if (substr($_FILES['arquivo']['name'], -3) == "png") {
-      $dir = './arquivos/';
-      $tmpName = $_FILES['arquivo']['tmp_name'];
-      $name = $_FILES['arquivo']['name'];
-      // move_uploaded_file
-    if (move_uploaded_file($tmpName, $dir . $nome_final)) {
-         $sqlstring = "insert into imagens (id, arquivo, nome) values (null, '$nome_final')";
-        mysqli_query($conexao, $sqlstring);
-        header('Location: index.php');
-    } 
-  }
-}
+//   if (substr($_FILES['arquivo']['name'], -3) == "png") {
+//       $dir = './arquivos/';
+//       $tmpName = $_FILES['arquivo']['tmp_name'];
+//       $name = $_FILES['arquivo']['name'];
+//       // move_uploaded_file
+//     if (move_uploaded_file($tmpName, $dir . $nome_final)) {
+//          $sqlstring = "insert into imagens (id, arquivo, nome) values (null, '$nome_final')";
+//         mysqli_query($conexao, $sqlstring);
+//         header('Location: index.php');
+//     } 
+//   }
+// }
   
-if($tipo == "2"){
+// if($tipo == "2"){
  
-    $nome = $_POST["nome"];
-    $nome_final = $nome . ".jpg";
+//     $nome = $_POST["nome"];
+//     $nome_final = $nome . ".jpg";
 
-    if (substr($_FILES['arquivo']['name'], -3) == "jpg") {
-        $dir = './arquivos/';
-        $tmpName = $_FILES['arquivo']['tmp_name'];
-        $name = $_FILES['arquivo']['name'];
-        // move_uploaded_file
-        if (move_uploaded_file($tmpName, $dir . $nome_final)) {
-             $sqlstring = "insert into imagens (id, arquivo, nome) values (null, '$nome_final')";
-            mysqli_query($conexao, $sqlstring);
-            header('Location: index.php');
-        } else {
-            echo "Erro ao gravar o arquivo";
-        }
-    } else {
-        echo "Não é documento jpg";
-    }
-}
-
-
-
+//     if (substr($_FILES['arquivo']['name'], -3) == "jpg") {
+//         $dir = './arquivos/';
+//         $tmpName = $_FILES['arquivo']['tmp_name'];
+//         $name = $_FILES['arquivo']['name'];
+//         // move_uploaded_file
+//         if (move_uploaded_file($tmpName, $dir . $nome_final)) {
+//              $sqlstring = "insert into imagens (id, arquivo, nome) values (null, '$nome_final')";
+//             mysqli_query($conexao, $sqlstring);
+//             header('Location: index.php');
+//         } else {
+//             echo "Erro ao gravar o arquivo";
+//         }
+//     } else {
+//         echo "Não é documento jpg";
+//     }
+// }
 ?>
 
 
