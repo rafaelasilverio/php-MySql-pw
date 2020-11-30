@@ -29,6 +29,7 @@
         $sqlstring = 'select * from imagens order by nome asc';
         $resultado = mysqli_query($conexao, $sqlstring);
         while ($dados = mysqli_fetch_array($resultado)) {
+            echo "batata";
             echo "</td><td width='200px'>";
             echo "<td align='center'>" . $dados['nome'] . "</td>";
             echo "<td align='center'><img src='arquivos/" . $dados['arquivo'] . "' width='100px' heigth='100px'></td>";
