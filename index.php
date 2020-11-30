@@ -11,10 +11,11 @@
                 <label for="arquivo">Insira o nome do arquivo:<input type = "text" name = "nome"/><br></label>
                 <label for="arquivo">Arquivo:</label> <input type="file" name="arquivo" id="arquivo" />
                 <br>
-                <label> </label>
+                <label>Digite 1 para uma imagem PNG e 2 caso for JPG<input type = "number" name = "tipo" width= "10px"><label>
+                <!-- <label> </label>
                 <label>PNG<input type="radio" name ="tipo" value = "png"></label>
                 <label> </label>
-                <label>JPG<input type="radio" name ="tipo" value = "jpg"></label>
+                <label>JPG<input type="radio" name ="tipo" value = "jpg"></label> -->
                 <br />
                 <br />
                 <input type="submit" value="Enviar" />
@@ -30,8 +31,8 @@
         $resultado = mysqli_query($conexao, $sqlstring);
         while ($dados = mysqli_fetch_array($resultado)) {
             echo $dados['nome'];
-            echo "<td align='center'><a href='abrir.php?id=" . $dados['id'] . "'><img src='abrir.png'></a>";
-            echo "<td align='center'><a href='apagar.php?id=" . $dados['id'] . "'><img src='delete.png'></a>";
+           echo "<td align='center'><a href='abrir.php?id=" . $dados['id'] . "'><img src='abrir.png'></a>";
+           echo "<td align='center'><a href='apagar.php?id=" . $dados['id'] . "'><img src='delete.png'></a>";
             // echo "</td><td width='200px'>";
             // echo "<td align='center'>" . $dados['nome'] . "</td>";
             // echo "<td align='center'><img src='arquivos/" . $dados['arquivo'] . "' width='100px' heigth='100px'></td>";
