@@ -1,6 +1,6 @@
 <?php
 
-include_once('conexao.php');
+
 // $tipo = $_POST["tipo"];
 // $nome = $_POST["nome"];
 
@@ -25,13 +25,13 @@ include_once('conexao.php');
 //             echo "Não é documento jpg";
 //         }
 //     }
-
+include_once('conexao.php');
 $tipo = $_POST["tipo"];
 //receber a variavel de nome lá do index
 if($tipo == "png"){
 
     $nome = $_POST["nome"];
-    $nome_final = ".png";
+    $nome_final = $nome . ".png";
 
   if (substr($_FILES['arquivo']['name'], -3) == "png") {
       $dir = './arquivos/';
@@ -49,7 +49,7 @@ if($tipo == "png"){
 if($tipo == "jpg"){
  
     $nome = $_POST["nome"];
-    $nome_final = ".jpg";
+    $nome_final = $nome . ".jpg";
 
     if (substr($_FILES['arquivo']['name'], -3) == "jpg") {
         $dir = './arquivos/';
