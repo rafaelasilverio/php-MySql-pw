@@ -35,7 +35,9 @@
            //echo "<td align='center'><a href='apagar.php?id=" . $dados['id'] . "'><img src='delete.png'></a>";
             echo "</td><td width='200px'>";
             echo "<td align='center'>" . $dados['nome'] . "</td>";
-            echo "<td align='center'><img src='arquivos/" . $dados['arquivo'] . "' width='100px' heigth='100px'></td>";
+            $imagem = $dados['imagem'];
+            echo "<td align='center'><a href='arquivos/$imagem'><img src='arquivos/$imagem' width='150px' heigth='150px'></a></td>";
+           // echo "<td align='center'><img src='arquivos/" . $dados['arquivo'] . "' width='100px' heigth='100px'></td>";
             echo "<td align='center'><a href='apagar.php?id=" . $dados['id'] . "'><img src='delete.png'></a></td>";
             echo "<td align='center'><a href='abrir.php?id=" . $dados['id'] . "'><img src='abrir.png'></a></td>";
             echo "</td></tr></table>";
