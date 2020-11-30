@@ -28,7 +28,7 @@
 include_once('conexao.php');
 $tipo = $_POST["tipo"];
 //receber a variavel de nome lá do index
-if($tipo == "2"){
+if($tipo == "1"){
 
     $nome = $_POST["nome"];
     $nome_final = $nome . ".png";
@@ -46,7 +46,7 @@ if($tipo == "2"){
   }
 }
   
-if($tipo == "1"){
+if($tipo == "2"){
  
     $nome = $_POST["nome"];
     $nome_final = $nome . ".jpg";
