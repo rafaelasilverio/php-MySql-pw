@@ -31,7 +31,7 @@
         $resultado = mysqli_query($conexao, $sqlstring);
         while ($dados = mysqli_fetch_array($resultado)) {
         echo $dados['nome'];
-          echo "<td align='center'><a href='abrir.php?id=" . $dados['id'] . "'><img src='abrir.png'></a><br>";
+          echo "<td align='center'><a href='abrir.php?id=" . $dados['id'] . "'><img src='abrir.png'></a>";
            echo "<td align='center'><a href='apagar.php?id=" . $dados['id'] . "'><img src='delete.png'></a><br>";
             // echo "</td><td width='200px'>";
             // echo "<td align='center'>" . $dados['nome'] . "</td>";
