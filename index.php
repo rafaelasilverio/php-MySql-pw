@@ -5,7 +5,7 @@
         <title> PHP - UPLOAD de Arquivos </title>
     </head>
     <body>
-        <h1> Exemplo de Upload - PHP </h1>
+        <h1> Minhas fotos preferidas - PHP </h1>
         <div>
             <form action="upload.php" method="post" enctype="multipart/form-data">
                 <label for="arquivo">Insira o nome do arquivo:<input type = "text" name = "nome"/><br></label>
