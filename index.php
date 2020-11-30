@@ -9,9 +9,9 @@
         <div>
             <form action="upload.php" method="post" enctype="multipart/form-data">
                 <label for="arquivo">Insira o nome do arquivo:<input type = "text" name = "nome"/><br></label>
-                <label for="arquivo">Arquivo:</label> <input type="file" name="arquivo" id="arquivo" />
+                <label for="arquivo">Insira o arquivo:</label> <input type="file" name="arquivo" id="arquivo" />
                 <br>
-                <label>Digite 1 para uma imagem PNG e 2 caso for JPG<input type = "number" name = "tipo" width= "10px"><label>
+                <label>Insira 1 se sua imagem for PNG e 2 se for JPG:<input type = "number" name = "tipo"><label>
                 <!-- <label> </label>
                 <label>PNG<input type="radio" name ="tipo" value = "png"></label>
                 <label> </label>

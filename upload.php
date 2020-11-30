@@ -20,10 +20,10 @@ if (substr($_FILES['arquivo']['name'], -3) == "png" ||substr($_FILES['arquivo'][
         mysqli_query($conexao, $sqlstring);
         header('Location: index.php');
     } else {
-        echo "Não ouve êxito ao gravar a imagem";
+        echo "Erro ao gravar a imagem";
     }
 } else {
-    echo "O tipo da imagem não é válido!";
+    echo "A imagem deve ser png ou jpg";
 }
 
 
